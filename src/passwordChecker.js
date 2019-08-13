@@ -22,10 +22,17 @@ function password_is_valid(password)
 
     }
     try {
-        if (password == null) {
+        if (password.lengh < 8){
+
         }
     }
     catch{
         
+    }
+    try {
+        if (password == null) {
+        }
+    }
+    catch{    
     }
 }
