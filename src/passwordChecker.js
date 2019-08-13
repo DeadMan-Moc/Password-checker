@@ -1,10 +1,16 @@
 function password_is_valid(password)
 {
     try {
-        if (/[A-Z][a-z]/){
+        if (password == /[A-Z]|[a-z]/g){
 
         }
-        if (/[0-9]/){
+        if (password == /[0-9]/g){
+
+        }
+        if (password == /[!@#$%^&*(),.?":{}|<>]/g){
+
+        }
+        if (password == null) {
 
         }
     }
