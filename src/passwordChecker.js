@@ -22,16 +22,17 @@ function password_is_valid(password)
         if (password.length != 0 && password.length >= 8)
         {
             if (password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/)) {
-                throw ("password is valid")
+                // throw ("password is valid");
+                return true;
             }
             else {
-                throw ("password is invalid indeed.")
+                throw new Error("password is invalid indeed.");
             }
         }
         else {
-            throw("password is invalid")
+            throw new Error("password is invalid");
         }
     }
   
 
-console.log(password_is_valid("Allie95@mok"))
+console.log(password_is_valid("Allie95@mok"));
