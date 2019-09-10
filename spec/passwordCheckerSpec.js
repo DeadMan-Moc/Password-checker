@@ -1,35 +1,52 @@
-// describe("Password validator", ()=>{
-//     it ("Returns error if the password length is less than 8 characters", ()=> {
-//         var raw = "asdAAda489";
-//          var answer = 8;
-//         expect(password_is_valid(raw)).toBeGreaterthan(answer);
-//     })
-// })
 describe("Password validator", ()=>{
     it ("Checks for strong password.", ()=> {
         var raw = "Allnssbd95";
         var answer = password_is_valid(raw);
         expect(answer).toBe(true);
     })
+    
+    it ("checks if password is empty.", ()=> {
+        var raw = "";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(false);
+    })
+    it ("checks if password is empty.", ()=> {
+        var raw = "asadfAA551";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(true);
+    })
+
+    it ("Checks if password length is greater than 8.", ()=> {
+        var raw = "Allns95";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(false);
+    })
+    it ("Checks if password length is greater than 8.", ()=> {
+        var raw = "Allnssbd95";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(false);
+    })
+
+    it ("Checks if passwords has atleast 1 digit.", ()=> {
+        var raw = "Allnssbd";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(false);
+    })
+    it ("Checks if passwords has atleast 1 digit.", ()=> {
+        var raw = "Allnssbd95";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(true);
+    })
+
+    it ("Checks if password has upper and lower cases.", ()=> {
+        var raw = "aaaanssbd95";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(false);
+    })
+
+    it ("Checks if password has upper and lower cases.", ()=> {
+        var raw = "Allnssbd95";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(true);
+    })
 })
-// describe("Password validator", ()=>{
-//     it ("Returns error if the password does not consist atleast 1 number", ()=> {
-//         var raw;
-//         var answer = password_is_valid(raw);
-//         expect(parser.parse(answer)).toThrow(new Error("Password must contain Numbers"));
-//     })
-// })
-// describe("Password validator", ()=>{
-//     it ("Returns error if the password does not consist special characters", ()=> {
-//         var raw;
-//         var answer = password_is_valid(raw);
-//         expect(parser.parse(answer)).toThrow(new Error("Password must contain 1 special character"));
-//     })
-// })
-// describe("Password validator", ()=>{
-//     it ("Returns error if the password field is empty", ()=> {
-//         var raw;
-//         var answer = password_is_valid(raw);
-//         expect(parser.parse(answer)).toThrow(new Error("Password must not be null"));
-//     })
-// })
