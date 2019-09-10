@@ -50,3 +50,21 @@ describe("Password validator", ()=>{
         expect(answer).toBe(true);
     })
 })
+
+
+
+
+
+// var condition2 = /(?=.{8,})/;
+    // var condition3 = /[A-Z]/;
+    // var condition4 = /[a-z]/;
+    // var condition1 = /[0-9]/;
+    // //let combine = condition1 + condition2 + condition3 + condition4;
+    // let combine = condition1.test(password) && condition2.test(password) && condition3.test(password) && condition4.password(password);
+    // let condition2 = /^[0-9]*$/g; 
+    // let condition3 = /^[a-z]*$/g;
+    // let condition4 = /^[A-Z]*$/g;
+    //let x = password.length > 8 && password.match(condition2) && password.match(condition3) && password.match(condition4);
+    //let y = condition2 && condition3 && condition4 && condition1;
+    //let x = combine.test(password);
+    // console.log(y)
