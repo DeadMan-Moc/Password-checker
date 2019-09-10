@@ -1,11 +1,16 @@
 function password_is_ok(password){
 
+    var condition1 = /(?=.{8,})/;
+    var condition2 = /[A-Z]/;
+    var condition3 = /[a-z]/;
+    var condition4 = /[0-9]/;
     
-    let condition2 = /^[0-9]*$/g; 
-    let condition3 = /^[a-z]*$/g;
-    let condition4 = /^[A-Z]*$/g;
+    let minimum_len = condition1.test(password)
+    let uppercase = condition2.test(password)
+    let lowercase = condition3.test(password)
+    let didgits = condition4.test(password)
 
-    if (password.length > 8 && password.match(condition2) && password.match(condition3) || password.match(condition4)){
+    if (minimum_len && didgits || (uppercase || lowercase)){
         return true;
     }
     else {
@@ -16,11 +21,11 @@ function password_is_ok(password){
 function password_is_valid(password)
 {
 
-    let testit = /^(?=.\d)(?=.[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
+    let testit = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
     let getit = testit.test(password);
     try {
         if (getit == false)
-            throw new Error ("passshjvbhk");
+            throw new Error ("Password should meet maximum criterias of a strong password.");
     }
     catch(err){
         console.log("Error " +err);
