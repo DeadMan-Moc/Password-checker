@@ -1,9 +1,9 @@
 function password_is_ok(password){
 
     
-    let condition2 = /[0-9]/g; 
-    let condition3 = /[a-z]/g;
-    let condition4 = /[A-Z]/g;
+    let condition2 = /^[0-9]*$/g; 
+    let condition3 = /^[a-z]*$/g;
+    let condition4 = /^[A-Z]*$/g;
 
     if (password.length > 8 && password.match(condition2) && password.match(condition3) || password.match(condition4)){
         return true;
@@ -22,4 +22,4 @@ function password_is_valid(password)
     }
 
 }
-console.log(password_is_valid("Allie95mok"));
+console.log(password_is_valid("hhcJHh88hyuyu"));

@@ -5,11 +5,11 @@ describe("Password validator", ()=>{
         expect(answer).toBe(true);
     })
     
-    // it ("checks if password is empty.", ()=> {
-    //     var raw = " ";
-    //     var answer = password_is_valid(raw);
-    //     expect(answer).toBe(true);
-    // })
+    it ("checks if password is empty.", ()=> {
+        var raw = "";
+        var answer = password_is_valid(raw);
+        expect(answer).toBe(true);
+    })
     it ("checks if password is empty.", ()=> {
         var raw = "asadfAA551";
         var answer = password_is_valid(raw);
